@@ -790,3 +790,29 @@ body.dark footer{
 }
 
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .sHead,
+    .sone {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .sHead h2,
+    .sone h2 {
+        font-size: 13px;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .sone input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+}
