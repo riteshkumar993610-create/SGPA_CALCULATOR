@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AKTU SGPA & CGPA Calculator | Ritesh Kumar</title>
+
+    <meta name="description"
+        content="Free AKTU SGPA & CGPA Calculator with Percentage, PDF Download, Dark Mode and Semester-wise Result.">
+
+    <meta name="author" content="Ritesh Kumar">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <h1 id="mHead">
+        🎓 AKTU SGPA & CGPA Calculator
+    </h1>
+
+    <p id="mAbout">
+        Calculate Semester SGPA, Percentage & Download PDF Result
+    </p>
+
+</header>
+
+
+
+    <div class="infoBox">
+        <label>Branch</label>
+
+        <select id="branch">
+
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>ME</option>
+            <option>CE</option>
+
+        </select>
+
+    </div>
+
+</section>
+
+
+
+<div id="topControls">
+
+    <select name="YEAR" id="year">
+
+        <option value="1">
+            1st Year
+        </option>
+
+        <option value="2">
+            2nd Year
+        </option>
+
+        <option value="3">
+            3rd Year
+        </option>
+
+        <option value="4">
+            4th Year
+        </option>
+
+    </select>
+
+
+<label class="switchWrap">
+
+<span>
+Dark Mode
+</span>
+
+<label class="switch">
+
+<input
+type="checkbox"
+id="modeToggle">
+
+<span class="slider"></span>
+
+</label>
+
+</label>
+
+<button id="reset">
+Reset All Data
+</button>
+
+</div>
+
+
+
+<div id="main">
+
+
+<!-- =================== Semester 1 =================== -->
+
+<div class="left">
+
+<div class="sem">
+
+<span class="circle">
+1
+</span>
+
+<h2>
+Semester
+</h2>
+
+</div>
+
+
+<div class="sHead">
+
+<h2>Subject</h2>
+
+<h2>Internal</h2>
+
+<h2>External</h2>
+
+</div>
+
+
+<div class="onesubjects">
+
+<div class="sone">
+
+<h2>Physics(4)</h2>
+
+<input
+type="number"
+min="0"
+max="30"
+placeholder="00">
+
+<input
+type="number"
+min="0"
+max="70"
+placeholder="00">
+
+</div>
+
+<div class="sone">
+
+<h2>Engg. Math-1(4)</h2>
+
+<input
+type="number"
+min="0"
+max="30"
+placeholder="00">
+
+<input
+type="number"
+min="0"
+max="70"
+placeholder="00">
+
+</div>
+
+<div class="sone">
+
+<h2>Electrical(3)</h2>
+
+<input
+type="number"
+min="0"
+max="30"
+placeholder="00">
+
+<input
+type="number"
+min="0"
+max="70"
+placeholder="00">
+
+</div>
+
+<div class="sone">
+
+<h2>PPS(3)</h2>
+
+<input
+type="number"
+min="0"
+max="30"
+placeholder="00">
+
+<input
+type="number"
+min="0"
+max="70"
+placeholder="00">
+
+</div>
+
+<div class="sone">
+
+<h2>EVS(3)</h2>
+
+<input
+type="number"
+min="0"
+max="30"
+placeholder="00">
+
+<input
+type="number"
+min="0"
+max="70"
+placeholder="00">
+
+</div>
+
+
+<div class="sone">
+
+    <h2>Physics Lab(1)</h2>
+
+    <input type="number" min="0" max="30" placeholder="00">
+    <input type="number" min="0" max="70" placeholder="00">
+
+</div>
+
+<div class="sone">
+
+    <h2>Electrical Lab(1)</h2>
+
+    <input type="number" min="0" max="30" placeholder="00">
+    <input type="number" min="0" max="70" placeholder="00">
+
+</div>
+
+<div class="sone">
+
+    <h2>Graphics(2)</h2>
+
+    <input type="number" min="0" max="30" placeholder="00">
+    <input type="number" min="0" max="70" placeholder="00">
+
+</div>
+
+<div class="sone">
+
+    <h2>PPS Lab(1)</h2>
+
+    <input type="number" min="0" max="30" placeholder="00">
+    <input type="number" min="0" max="70" placeholder="00">
+
+</div>
+
+</div>
+
+<div class="credit">
+
+    <h2>Total Credit :</h2>
+    <h2>Marks :</h2>
+    <h2>Percentage :</h2>
+
+</div>
+
+<div class="calculate">
+
+<button class="calCGPA">
+Calculate SGPA
+</button>
+
+<h2>
+SGPA : 0
+</h2>
+
+<button class="downloadBtn" style="display:none;">
+Download Result
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= Semester 2 ================= -->
+
+<div class="left">
+
+<div class="sem">
+
+<span class="circle">
+2
+</span>
+
+<h2>
+Semester
+</h2>
+
+</div>
+
+<div class="sHead">
+
+<h2>Subject</h2>
+<h2>Internal</h2>
+<h2>External</h2>
+
+</div>
+
+<div class="onesubjects">
+<!-- JavaScript automatically loads semester subjects -->
+</div>
+
+<div class="credit">
+
+<h2>Total Credit :</h2>
+<h2>Marks :</h2>
+<h2>Percentage :</h2>
+
+</div>
+
+<div class="calculate">
+
+<button class="calCGPA">
+Calculate SGPA
+</button>
+
+<h2>
+SGPA : 0
+</h2>
+
+<button class="downloadBtn" style="display:none;">
+Download Result
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div id="Total">
+
+<h2>
+Total :
+</h2>
+
+</div>
+
+
+
+<footer>
+
+<h3>
+Developed by <span>Ritesh Kumar</span>
+</h3>
+
+<p>
+AKTU SGPA & CGPA Calculator
+</p>
+
+<div class="footerLinks">
+
+<a
+href="https://www.linkedin.com/in/ritesh-kumar-3b621a358"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+
+
+</div>
+
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

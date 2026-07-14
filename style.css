@@ -1,0 +1,792 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#a8edea,#fed6e3);
+    color:#222;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+#mHead{
+    margin-top:20px;
+    text-align:center;
+    font-size:2.2rem;
+    font-weight:700;
+    color:#1d4ed8;
+}
+
+#mAbout{
+    text-align:center;
+    margin:10px 0 20px;
+    color:#555;
+    font-size:16px;
+}
+
+
+/* ===========================
+   TOP CONTROLS
+=========================== */
+
+#topControls{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    padding:20px;
+}
+
+
+#year{
+
+    padding:10px 18px;
+
+    font-size:16px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+#year:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+#reset{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#reset:hover{
+
+    background:#dc2626;
+
+}
+
+
+/* ===========================
+   DARK MODE SWITCH
+=========================== */
+
+.switchWrap{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:55px;
+
+    height:28px;
+
+}
+
+.switch input{
+
+    display:none;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#ccc;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.slider:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    left:3px;
+
+    top:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+}
+
+input:checked+.slider{
+
+    background:#2563eb;
+
+}
+
+input:checked+.slider:before{
+
+    transform:translateX(27px);
+
+}
+
+
+/* ===========================
+   MAIN
+=========================== */
+
+#main{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+    padding:20px;
+
+}
+
+
+/* ===========================
+   SEMESTER CARD
+=========================== */
+
+.left{
+
+    width:45%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.left:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* ===========================
+   SEMESTER HEADER
+=========================== */
+
+.sem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+}
+
+.circle{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+/* ===========================
+   SUBJECT HEADER
+=========================== */
+
+.sHead{
+
+    display:grid;
+
+    grid-template-columns:1fr 100px 100px;
+
+    padding:12px;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    color:white;
+
+    border-radius:8px;
+
+    margin-bottom:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+/* ===========================
+   SUBJECT ROW
+=========================== */
+
+.onesubjects{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.sone{
+
+    display:grid;
+
+    grid-template-columns:1fr 100px 100px;
+
+    gap:10px;
+
+    align-items:center;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    background:#f8fafc;
+
+    transition:.3s;
+
+}
+
+.sone:hover{
+
+    background:#eef4ff;
+
+}
+
+.sone h2{
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+
+/* ===========================
+   INPUT
+=========================== */
+
+.sone input{
+
+    width:100%;
+
+    padding:8px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:6px;
+
+    outline:none;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.sone input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+
+}
+
+
+/* ===========================
+   CREDIT BOX
+=========================== */
+
+.credit{
+
+    margin-top:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    padding:12px;
+
+    background:#fef3c7;
+
+    border-radius:8px;
+
+}
+
+.credit h2{
+
+    font-size:16px;
+
+}
+
+
+/* ===========================
+   CALCULATE SECTION
+=========================== */
+
+.calculate{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.calCGPA{
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.calCGPA:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 20px rgba(37,99,235,.35);
+
+}
+
+
+.downloadBtn{
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.downloadBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 20px rgba(34,197,94,.35);
+
+}
+
+
+/* ===========================
+   TOTAL RESULT
+=========================== */
+
+#Total{
+
+    width:95%;
+
+    margin:25px auto;
+
+    padding:18px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.8);
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+#Total h2{
+
+    font-size:24px;
+
+    color:#1d4ed8;
+
+    font-weight:700;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:auto;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+footer h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+footer span{
+
+    color:#38bdf8;
+
+}
+
+footer p{
+
+    color:#cbd5e1;
+
+    margin-bottom:12px;
+
+}
+
+.footerLinks{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.footerLinks a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.footerLinks a:hover{
+
+    color:white;
+
+}
+
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark{
+
+    background:linear-gradient(135deg,#020617,#0f172a);
+
+    color:white;
+
+}
+
+body.dark .left{
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+body.dark .sHead{
+
+    background:linear-gradient(135deg,#1d4ed8,#0ea5e9);
+
+}
+
+body.dark .sone{
+
+    background:#334155;
+
+}
+
+body.dark .sone:hover{
+
+    background:#475569;
+
+}
+
+body.dark .credit{
+
+    background:#1e40af;
+
+}
+
+body.dark #Total{
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+body.dark footer{
+
+    background:#020617;
+
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+.left{
+
+    width:100%;
+
+}
+
+.sHead,
+.sone{
+
+    grid-template-columns:1fr 70px 70px;
+
+}
+
+.calculate{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+}
+
+.calCGPA,
+.downloadBtn{
+
+    width:100%;
+
+}
+
+.credit{
+
+    flex-direction:column;
+
+}
+
+#topControls{
+
+    justify-content:center;
+
+}
+
+}
+
+
+@media(max-width:500px){
+
+#mHead{
+
+    font-size:28px;
+
+}
+
+#mAbout{
+
+    font-size:14px;
+
+}
+
+.sHead,
+.sone{
+
+    grid-template-columns:1fr 60px 60px;
+
+    font-size:12px;
+
+}
+
+.sone h2{
+
+    font-size:12px;
+
+}
+
+.circle{
+
+    width:30px;
+
+    height:30px;
+
+    font-size:15px;
+
+}
+
+#year{
+
+    width:120px;
+
+}
+
+#reset{
+
+    width:140px;
+
+}
+
+.switchWrap span{
+
+    display:none;
+
+}
+
+.calCGPA{
+
+    font-size:15px;
+
+}
+
+.downloadBtn{
+
+    font-size:14px;
+
+}
+
+}
